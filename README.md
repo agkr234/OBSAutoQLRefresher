@@ -1,8 +1,11 @@
 # OBSAutoQLRefresher
 
-This script is intended to solve the **frozen game capture screen** problem in OBS which you face in Quake Live streaming.
+[日本語版のREADMEはこちら](https://github.com/agkr234/OBSAutoQLRefresher/blob/master/README-ja.md)
 
-It tackles this problem by monitoring the game server where you are playing in combination of checking steam profile page and querying a game server.
+
+This script is intended to automate the work which fixes the **frozen game capture screen** when you are streaming Quake Live on OBS. Note that **this won't fix the cause of the problem**.
+
+This script automate the work by monitoring the game server where you are playing in combination of checking steam profile page and querying a game server.
 
 ## Requirements
 - Open Broadcaster Software
@@ -12,20 +15,21 @@ It tackles this problem by monitoring the game server where you are playing in c
 
 ## Installation
 1. Install Python 3.6
-- Don't forget to check the "Add Python 3.6 to PATH" when installing it.
+    - Don't forget to check the "Add Python 3.6 to PATH" when installing it.
 
 2. Download and load the script in *Scripts* window on OBS.
-- Go to *Tools* in menu bar > *Scripts* and add the script via "+" button on the bottom left courner.
+    - Go to *Tools* in menu bar > *Scripts* and add the script via "+" button on the bottom left courner.
 
-3. Install necessary libraries for the script using pip via Command prompt or bash or something.
-- Move to the directory where requirements.txt sits and execute `pip install -r requirements.txt`
-  - if your system has multiple python versions, `py -3.6 -m pip install -r requirements.txt` may help.
+3. Install necessary libraries for the script using pip on CUI (Command prompt or bash or something).
+    - Move to the directory where requirements.txt sits and execute `pip install -r requirements.txt`
+      - if your system has multiple python versions, `py -3.6 -m pip install -r requirements.txt` may help.
 
 4. Set *Python Install Path* in Scripts window on OBS to your python 3.6's path.
-- The option is **not** in *Settings* window, but in *Python Settings* tab of *Scripts* window.
+    - Example: `C:/Users/Your User Name/AppData/Local/Programs/Python/Python36`
+    
 5. Set *Steam Community URL* option to yours.
-- If you want to get the url on Steam client, right click on your profile page and click *Copy Page URL*.
-- You can open your Steam Community Profile page via *steam://url/SteamIDMyProfile*
+    - If you want to get the url on Steam client, right click on your profile page and click *Copy Page URL*.
+    - You can open your Steam Community Profile page via *steam://url/SteamIDMyProfile*
 
 6. Set *Target Source* to the screen which captures Quake Live and volia.
 
@@ -44,7 +48,7 @@ It tackles this problem by monitoring the game server where you are playing in c
   - the lower the value is, the more often it checks. But not recommended since setting it to lower results in more load on a game server.
   
 - Blink Speed (ms) [value]
-  - how fast the targeted screen turns off and on when refreshing.
+  - how fast the targeted screen is turned off and on when refreshing.
   - If you set it to extremely lower value, the screen may remain frozen even if it refreshes.
   
 - Disable the script when Quake Live is not running [checkbox]
@@ -56,6 +60,6 @@ It tackles this problem by monitoring the game server where you are playing in c
   
 ## Known Issues
 - Failed to refresh frozen screen *when you are playing in local game server.*
-  - we cannot tell apart the status of the lobby from the local server, so unfortunately, that shouldn't be helped.
+  - we cannot tell apart the status of the lobby from the local server via Steam Community Profile page, so unfortunately, that shouldn't be helped.
 - Failed to refresh frozen screen *when you reconnect to a server.*
-  - you reconnect to a server so fast that the script couldn't catch the status change. thats why refreshing doesnt occur.
+  - you reconnect to a server so fast that the script couldn't catch the server status change. thats why refreshing doesnt occur.
