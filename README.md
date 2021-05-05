@@ -29,7 +29,7 @@ This script automate the work by monitoring the game server where you are playin
     
 5. Set *Steam Community URL* option to yours.
     - If you want to get the url on Steam client, right click on your profile page and click *Copy Page URL*.
-    - You can open your Steam Community Profile page via *steam://url/SteamIDMyProfile*
+    - You can open your Steam Community Profile page via *steam://url/SteamIDMyProfile* (You need to launch and login to Steam Client)
 
 6. Set *Target Source* to the screen which captures Quake Live and volia.
 
