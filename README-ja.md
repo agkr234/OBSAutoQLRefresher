@@ -25,7 +25,7 @@ OBSでQuake Live配信中に発生する画面のフリーズの復旧作業を�
     - Windowsでの例だと`C:/Users/ユーザー名/AppData/Local/Programs/Python/Python36`
 5. *Steam Community URL*を自分のSteam Community Profile URLに設定する。
     - Steamクライアント上でプロフィールページを開いてコピーしたい場合、ページ上で右クリックして *ページのURLをコピーする* をクリック
-    - このリンクを開けばすぐに自分のSteam Community Profile Pageに行けるよ！（Steamクライアントの起動とログインが必要） *steam://url/SteamIDMyProfile* 
+    - このリンクを開けばすぐに自分のプロフィールページに行けるよ！（Steamクライアントの起動とログインが必要） *steam://url/SteamIDMyProfile* 
 
 6. *Target Source*をQuake LiveをキャプチャしているGame captureに選択すれば出来上がり。
 
