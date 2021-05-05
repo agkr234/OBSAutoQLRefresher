@@ -41,7 +41,7 @@ This script automate the work by monitoring the game server where you are playin
   - this is used to check your game status and get the ip address of a game server where you are playing.
 
 - Target Source [select]
-  - the target screen which will be refreshed when you join/leave a server or server's map change happens.
+  - the target screen which will be refreshed when you join a server or server's map change happens.
 
 - Check Interval (ms) [value]
   - how often the script checks a game server where you are playing.
